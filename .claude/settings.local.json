@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(cd \"d:\\\\dental\\\\server\" ; $proc = Start-Process -NoNewWindow -PassThru -FilePath \"node\" -ArgumentList \"index.js\"; Start-Sleep 2; try { $resp = Invoke-WebRequest -Uri \"http://localhost:5000/api/services\" -UseBasicParsing; $resp.StatusCode } finally { $proc.Kill\\(\\) })"
-    ]
-  }
-}
