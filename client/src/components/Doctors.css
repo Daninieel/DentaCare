@@ -1,0 +1,88 @@
+.doctors {
+  padding: 96px 0;
+  background: var(--bg-light);
+}
+
+.doctors__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.doctor-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.doctor-card__avatar {
+  background: linear-gradient(135deg, var(--primary), #0284c7);
+  padding: 40px 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.doctor-card__info {
+  padding: 24px;
+}
+
+.doctor-card__name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.doctor-card__specialty {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--primary-light);
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.doctor-card__exp {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.exp-icon {
+  color: var(--accent);
+  font-size: 10px;
+}
+
+.doctor-card__btn {
+  display: block;
+  background: var(--primary);
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.doctor-card__btn:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .doctors__grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+}
